@@ -68,6 +68,7 @@ We use DIB to search for the right data item, for example, for Instrument we ent
 And now we proceed to the most interesting part.  We know the data items we would like to use by lookingit up in Eikon Excel examples, and we can parametrize the data items per requirement, by looking up the data itemsin Data Item Browser.
 
 1.  We start Python interpreter.  We will work on the python script in separate text editor, pasting and running the script into python interpreter when we are ready to test. 
+
 2.  Let us flex our muscle by running the following little script:
 
  Note, please be careful of the spaces and tabs, as python requires them sctrictly observed.
@@ -129,7 +130,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
  df2
  df3
  df4
- ``` 
+ ```
  
  We see the output:
 
