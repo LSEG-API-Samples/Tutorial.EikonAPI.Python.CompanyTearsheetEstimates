@@ -71,7 +71,8 @@ And now we proceed to the most interesting part.  We know the data items we wou
 2.  Let us flex our muscle by running the following little script:
 
  ``` 
-df, err = ek.get_data("IBM",      [                     ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})                    ])df
+ df, err = ek.get_data("IBM",
+[                     ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})                    ])df
  ```
  
  We should see the output:
