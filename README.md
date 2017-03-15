@@ -90,7 +90,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
 
    Revenue - Mean Estimate
  0              78663.43974
- ```
+ ```
  
 3. Next we try to retrieve data for the three different periods, as required for Esimatesdata region, while laying the results out into rows:
 
