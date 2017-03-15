@@ -86,10 +86,10 @@ And now we proceed to the most interesting part.  We know the data items we wou
  
  ```
    Instrument  Revenue - Actual  Revenue - Mean Estimate  \
-0        IBM             79919              78717.97129
+ 0        IBM             79919              78717.97129
 
    Revenue - Mean Estimate
-0              78663.43974
+ 0              78663.43974 
  ```
  
 3. Next we try to retrieve data for the three different periods, as required for Esimatesdata region, while laying the results out into rows:
@@ -129,7 +129,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
  df2
  df3
  df4
- ```
+ ``` 
  
  We see the output:
 
