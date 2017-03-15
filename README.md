@@ -151,6 +151,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
  0        IBM              78717.97129              78663.43974
  >>>
  ```
+ 
 4. Now we are looking to retrieve the complete set of data required, while formatting the output into columns:
 
 Please refer to the [complete script](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Estimates3.py)
