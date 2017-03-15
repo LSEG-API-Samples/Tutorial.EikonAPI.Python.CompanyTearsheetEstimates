@@ -45,14 +45,15 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
 5. Now we are ready for the most important of the steps in lookup, the actual lookup.  As we click on one of the cells that contain the estimate functions, for example E24, in the Excel formula window we see the  function call that is required to pull this data:
 
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/ExcelFunctionLookupMarked.jpg "Eikon Excel Function Lookup")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/ExcelFunctionLookupMarked.jpg "Eikon Excel Function Lookup")
 
-For example, E24 conpains TR.RevenueHigh with parameters period being "FY1", scale equaling 6, and currency #1,  referring to "USD"
-  The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from python eikon.
+ For example, E24 conpains TR.RevenueHigh with parameters period being "FY1", scale equaling 6, and currency #1,  referring to "USD"
+
+ The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from python eikon.
 
 ### Using DIB as Reference
 
-Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon Scripting Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
+ Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon Scripting Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonScriptingProxyMarked.jpg "Starting DIB")
 
