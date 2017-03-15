@@ -71,7 +71,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
 
 2.  Let us flex our muscle by running the following little script:
 
- Note, please be careful of the spaces and tabs, as python requires them sctrictly observed.
+ _Note, please be careful of the spaces and tabs, as python requires them sctrictly observed._
  
  ```
  df, err = ek.get_data("IBM", 
@@ -157,7 +157,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
 
 Please refer to the [complete script](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Estimates3.py)
 
-Please note that there can be only one request to get the field in get_data call.  Therefore, for the same field call, but with different parameters, we use another call.
+_Note, that there can be only one request to get the field in get_data call.  Therefore, for the same field call, but with different parameters, we use another call._
 
  When we run this script, the result should be:
  
