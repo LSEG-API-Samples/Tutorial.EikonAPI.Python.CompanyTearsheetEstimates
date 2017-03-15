@@ -57,7 +57,9 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonScriptingProxyMarked.jpg "Starting DIB")
 
-We use DIB to search for the right data item, for example, for Instrument we enter "IBM", and Data Item Name we look up is TR.RevenueHigh,we are able to:  * Lookup the complete list of parameters with possible values (on the right side panel) * Review the specific value we expect for IBM, on the main panel
+We use DIB to search for the right data item, for example, for Instrument we enter "IBM", and Data Item Name we look up is TR.RevenueHigh,we are able to:  
+ * Lookup the complete list of parameters with possible values (on the right side panel) 
+ * Review the specific value we expect for IBM, on the main panel
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBMarked.jpg "Using DIB")
 
@@ -65,10 +67,11 @@ We use DIB to search for the right data item, for example, for Instrument we ent
 
 And now we proceed to the most interesting part.  We know the data items we would like to use by lookingit up in Eikon Excel examples, and we can parametrize the data items per requirement, by looking up the data itemsin Data Item Browser.
 
-1.  We start Python interpreter.  We will work on the python script in separate text editor, pasting and running the script into python interpreter when we are ready to test. 2.  Let us flex our muscle by running the following little script:
+1.  We start Python interpreter.  We will work on the python script in separate text editor, pasting and running the script into python interpreter when we are ready to test. 
+2.  Let us flex our muscle by running the following little script:
 
  ``` 
- df, err = ek.get_data("IBM",      [                     ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})                    ]) df 
+df, err = ek.get_data("IBM",      [                     ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})                    ])df
  ```
  
  We should see the output:
