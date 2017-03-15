@@ -84,12 +84,14 @@ And now we proceed to the most interesting part.  We know the data items we wou
  
  We should see the output:
  
+ ```
    Instrument  Revenue - Actual  Revenue - Mean Estimate  \
 0        IBM             79919              78717.97129
 
    Revenue - Mean Estimate
 0              78663.43974
-  
+ ```
+ 
 3. Next we try to retrieve data for the three different periods, as required for Esimatesdata region, while laying the results out into rows:
 
  ```
@@ -129,8 +131,9 @@ And now we proceed to the most interesting part.  We know the data items we wou
  df4
  ```
  
-  We see the output:
+ We see the output:
 
+ ```
  >>> df1
   Instrument  Revenue - Actual  Revenue - Mean Estimate  \
  0        IBM             79919              78717.97129
@@ -147,7 +150,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
   Instrument  Revenue - Mean Estimate  Revenue - Mean Estimate
  0        IBM              78717.97129              78663.43974
  >>>
- 
+ ```
 4. Now we are looking to retrieve the complete set of data required, while formatting the output into columns:
 
 Please refer to the [complete script](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Estimates3.py)
