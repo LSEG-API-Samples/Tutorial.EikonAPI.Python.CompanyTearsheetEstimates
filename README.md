@@ -72,7 +72,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
 
  Note, please be careful of the spaces and tabs, as python requires them sctrictly observed.
  
- ``` 
+ ```
  df, err = ek.get_data("IBM", 
 					[ 
                     ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),
@@ -80,8 +80,8 @@ And now we proceed to the most interesting part.  We know the data items we wou
                     ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
                     ])
  df
- ``` 
-
+ ```
+ 
  We should see the output:
  
    Instrument  Revenue - Actual  Revenue - Mean Estimate  \
