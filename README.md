@@ -10,19 +10,20 @@ Please refer to [Quick Start](https://developers.thomsonreuters.com/tr-eikon-scr
 
 1. TR Eikon Scripting Proxy is installed
 2. Python is installed
-3. Eikon Python API is installed
+3. Eikon Python library is installed
 
 ### Expected Result
 
 This is how the Estimates look in Eikon Excel Company Tearsheet template example
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/excelEstimatesCropped.jpg "Excel Company Tearsheet Estimates")
+
 We learn how to retrieve the same data content via Eikon scripting from python
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/pythonEstimatesCropped.jpg "Same data content, python")
 
 ### Approach
-1. Using Eikon Excel for Lookup
-2. Using DIB as Reference
-3. Using Python Excel to Access Data
+1. Using Eikon Excel for lookup
+2. Using DIB as reference
+3. Using Eikon Python library to access data
 
 ### Using Excel for Lookup
 
@@ -51,6 +52,13 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
  The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from python eikon.
 
+6. While we are still looking at Eikon Excel, let's step aside from our example briefly, and consider another, very viable situation.  Let's say that we are developing an application, have our requirements and there is no Excel template example that we can use as a starting point.  
+ We are are going to discuss using _Excel Formula Builder_ for data lookup.
+
+ We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
+
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EioknExcelFormulaBuilderMarked.jpg "Eikon Excel Formula Builder")
+ 
 ### Using DIB as Reference
 
  Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon Scripting Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
@@ -63,7 +71,7 @@ We use DIB to search for the right data item, for example, for Instrument we ent
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBMarked.jpg "Using DIB")
 
-### Using Python Excel to Access Data
+### Using Eikon Python Library to Access Data
 
 And now we proceed to the most interesting part.  We know the data items we would like to use by lookingit up in Eikon Excel examples, and we can parametrize the data items per requirement, by looking up the data itemsin Data Item Browser.
 
