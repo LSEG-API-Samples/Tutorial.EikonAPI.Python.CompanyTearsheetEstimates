@@ -52,13 +52,16 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
  The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from python eikon.
 
-6. While we are still looking at Eikon Excel, let's step aside from our example briefly, and consider another, very viable situation.  Let's say that we are developing an application, have our requirements and there is no Excel template example that we can use as a starting point.  
- We are are going to discuss using _Excel Formula Builder_ for data lookup.
+6. While we are still looking at Eikon Excel, let's step aside from Company Tearsheet Estimates example, and consider a generic approach to discovering Eikon data content.  We are are going to discuss using _Excel Formula Builder_.
 
- We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
+  1. We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
 
- ![alt text](https://github.com/TR-API-Samples/EikonAPIProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Formula Builder")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelFormulaBuilderMarked.jpg "Eikon Excel Formula Builder")
  
+  2. Once Formula Builder is up, in the Instrument input we type "IBM" and out of the offered options click on "International Business Machines":
+  
+  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelFormulaBuilderIBM.jpg "Eikon Excel Formula Builder IBM")
+
 ### Using DIB as Reference
 
  Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon Scripting Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
