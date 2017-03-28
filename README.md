@@ -56,11 +56,12 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
   1. We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelFormulaBuilderMarked.jpg "Eikon Excel Formula Builder")
+ ![alt text](https://github.com/TR-API-Samples/EikonAPIProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Formula Builder")
  
   2. Once Formula Builder is up, in the Instrument input we type "IBM" and out of the offered options click on "International Business Machines":
   
-  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelFormulaBuilderIBM.jpg "Eikon Excel Formula Builder IBM")
+  ![alt text](https://github.com/TR-API-Samples/EikonAPIProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaIBM.jpg "Eikon Excel Formula Builder IBM")
+  
 
 ### Using DIB as Reference
 
