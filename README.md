@@ -57,7 +57,7 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
  We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EioknExcelFormulaBuilderMarked.jpg "Eikon Excel Formula Builder")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelFormulaBuilderMarked.jpg "Eikon Excel Formula Builder")
  
 ### Using DIB as Reference
 
