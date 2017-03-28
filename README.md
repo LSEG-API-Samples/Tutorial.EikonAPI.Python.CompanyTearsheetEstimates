@@ -53,13 +53,14 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
  The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from python eikon.
 
 6. While we are still looking at Eikon Excel, let's step aside from Company Tearsheet Estimates example, and consider a generic approach to discovering Eikon data content.  We are are going to discuss using _Excel Formula Builder_.
-  1. We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
-
-  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelFormulaBuilderMarked.jpg "Eikon Excel Formula Builder")
- 
-  2. Once Formula Builder is up, in the Instrument input we type "IBM" and out of the offered options click on "International Business Machines":
   
-  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelFormulaBuilderIBM.jpg "Eikon Excel Formula Builder IBM")
+ We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
+
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Formula Builder")
+ 
+ Once Formula Builder is up, in the Instrument input we type "IBM" and out of the offered options click on "International Business Machines":
+  
+![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaIBM.jpg "Eikon Excel Formula Builder IBM")
 
 ### Using DIB as Reference
 
