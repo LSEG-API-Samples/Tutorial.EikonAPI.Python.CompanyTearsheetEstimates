@@ -66,9 +66,11 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaRevenueHigh.jpg "Eikon Excel Formula Builder Revenue High")
 
- And as we select and add "Total Non-Interest Revenue High" onn the right hand side we observe selectable full list of available parameters for the data time, in the bottom left side we review the exact formula required to derive this data item in the currently selected parametrization:
+ Now from "Category"selection list we select "Reuters Fundamentals", from "Fields" selection list we pick "Total Revenue" and in "Parameter" on the right hand side we change "Financial Period" to "FY-1".
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaTotal.jpg "Eikon Excel Formula Builder Total")
+ Our selections are reflected in the ready to use formula in the bottom left corner.  When we are satisfied with the inputs, we click on "Insert" button in the bottom right corner:
+
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaTotalRevenue.jpg "Eikon Excel Formula Builder Total Revenue")
 
 ### Using DIB as Reference
 
