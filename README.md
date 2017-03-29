@@ -82,11 +82,15 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonAPIProxyMarked.jpg "Starting DIB")
 
-We use DIB to search for the right data item, for example, for Instrument we enter "IBM", and Data Item Name we look up is TR.RevenueHigh,we are able to:  
+ We use DIB to search for the right data item, for example, for Instrument we enter "IBM", and choose "International Business Machines":
+
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBIBM.jpg "DIB IBM")
+
+ In Data Item Name we look up TR.RevenueHigh,  so we start typing "TR.RevenueH" and once TR.RevenueHigh appears in the main window, we select it.  We are able to:  
  * Lookup the complete list of parameters with possible values (on the right side panel) 
  * Review the specific value we expect for IBM, on the main panel
 
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBMarked.jpg "Using DIB")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBMarked.jpg "Using DIB")
 
 ### Using Eikon Python Library to Access Data
 
