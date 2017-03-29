@@ -1,6 +1,6 @@
 # Company Tearsheet Estimates
-# Eikon Scripting Tutorial
-# Python
+# Eikon API Python
+# Tutorial
 
 We would like to start this tutorial where Eikon Scrpting Proxy Quickstart has left off.  This brief tutorial will discuss the steps required to retrieve the data that is presented in the Estmates section of "Company Tearsheet" Eikon Excel example.
 
