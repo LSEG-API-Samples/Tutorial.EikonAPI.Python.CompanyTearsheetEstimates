@@ -54,13 +54,21 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
 6. While we are still looking at Eikon Excel, let's step aside from Company Tearsheet Estimates example, and consider a generic approach to discovering Eikon data content.  We are are going to discuss using _Excel Formula Builder_.
   
- We click on an empty Excel cel and from ThomsonReuters menu we choose Formula Builder:
+ We click on an empty Excel cel and from ThomsonReuters menu we choose Build Formula:
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Formula Builder")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Build Formula")
  
- Once Formula Builder is up, in the Instrument input we type "IBM" and out of the offered options click on "International Business Machines":
+ Once Formula Builder is up, in the "Instrument" input we type "IBM" and out of the offered options click on "International Business Machines":
   
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaIBM.jpg "Eikon Excel Formula Builder IBM")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaIBM.jpg "Eikon Excel Formula Builder IBM")
+
+ Next, in "Search Data Items" input we type "Revenue High":
+
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaRevenueHigh.jpg "Eikon Excel Formula Builder Revenue High")
+
+ And as we select and add "Total Non-Interest Revenue High" onn the right hand side we observe selectable full list of available parameters for the data time, in the bottom left side we review the exact formula required to derive this data item in the currently selected parametrization:
+
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaTotal.jpg "Eikon Excel Formula Builder Total")
 
 ### Using DIB as Reference
 
