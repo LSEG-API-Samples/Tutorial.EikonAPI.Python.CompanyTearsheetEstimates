@@ -78,9 +78,9 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
 ### Using DIB as Reference
 
- Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon Scripting Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
+ Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon API Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
 
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonScriptingProxyMarked.jpg "Starting DIB")
+![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonAPIProxyMarked.jpg "Starting DIB")
 
 We use DIB to search for the right data item, for example, for Instrument we enter "IBM", and Data Item Name we look up is TR.RevenueHigh,we are able to:  
  * Lookup the complete list of parameters with possible values (on the right side panel) 
