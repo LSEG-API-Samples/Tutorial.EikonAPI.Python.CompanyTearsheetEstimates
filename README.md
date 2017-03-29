@@ -72,6 +72,10 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaTotalRevenue.jpg "Eikon Excel Formula Builder Total Revenue")
 
+ And our Excel spreadsheet, in the selected cell, now reflects the updated Total Revenue:
+
+  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTotalRevenue.jpg "Eikon Excel Total Revenue")
+
 ### Using DIB as Reference
 
  Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon Scripting Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
