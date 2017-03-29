@@ -2,13 +2,13 @@
 # Eikon API Python
 # Tutorial
 
-We would like to start this tutorial where Eikon Scrpting Proxy Quickstart has left off.  This brief tutorial will discuss the steps required to retrieve the data that is presented in the Estmates section of "Company Tearsheet" Eikon Excel example.
+We would like to start this tutorial where Eikon API Proxy Quickstart has left off.  This brief tutorial will discuss the steps required to retrieve the data that is presented in the Estmates section of "Company Tearsheet" Eikon Excel example.
 
 ### Prerequisites
 
-Please refer to [Quick Start](https://developers.thomsonreuters.com/tr-eikon-scripting-apis-eap-limited-access/eikon-web-and-scripting-apis-beta/quick-start) for the details
+Please refer to [Quick Start Guide](https://developers.thomsonreuters.com/tr-eikon-scripting-apis-eap-limited-access/eikon-web-and-scripting-apis-beta/quick-start) for the details
 
-1. TR Eikon Scripting Proxy is installed
+1. TR Eikon API Proxy is installed
 2. Python is installed
 3. Eikon Python library is installed
 
@@ -17,18 +17,21 @@ Please refer to [Quick Start](https://developers.thomsonreuters.com/tr-eikon-scr
 This is how the Estimates look in Eikon Excel Company Tearsheet template example
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/excelEstimatesCropped.jpg "Excel Company Tearsheet Estimates")
 
-We learn how to retrieve the same data content via Eikon scripting from python
+We learn how to retrieve the same data content via Eikon API from Python
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/pythonEstimatesCropped.jpg "Same data content, python")
 
-### Approach
-1. Using Eikon Excel for lookup
-2. Using DIB as reference
+### Approach (Detailed in the Next Sections)
+
+1. Using Eikon Excel for lookupetailed in the next sections
+2. Using Data Item Browser (DIB) as reference.
 3. Using Eikon Python library to access data
+
+
 
 ### Using Excel for Lookup
 
 1. From All Programs menu, we expand Thomson Reuters menu item and select Thomson Reuters Eikon - Microsoft Excel.
-2. Once Excel is open, from Thomson Reuters menu item we choose "Sign In" option, and enter your Thomson Reuters Eikon credentials, hitting "Sign In" button.  The status should change to "Online"
+2. Once Excel is open, from Thomson Reuters menu item we choose "Sign In" option, and enter valid Thomson Reuters Eikon credentials, hitting "Sign In" button.  The status should change to "Online"
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelSignIn.jpg "Eikon Excel Online")
 
