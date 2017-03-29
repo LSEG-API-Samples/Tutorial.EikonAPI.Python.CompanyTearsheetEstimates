@@ -35,29 +35,29 @@ We learn how to retrieve the same data content via Eikon API from Python
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelSignIn.jpg "Eikon Excel Online")
 
-3. Next, from Thomson Reuters menu item, we choose Templates
+3. Next, from Thomson Reuters ribbon, we choose Templates
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTemplates.jpg "Eikon Excel Templates")
 
-And select from the Template Library first "Fundamentals" on the left, then "Company Tearsheet" on the right, then click "Open":
+Select from the Template Library "Fundamentals" on the left, then "Company Tearsheet" on the right, then click "Open":
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTearsheet.jpg "Eikon Excel Company Tearsheet")
 
-4. We are looking at the template, or example "Company Tearsheet".  In this tutorial we will aim to replicate the data retrieval in Estimates parts of this example by using eikon scripting from python.  Let's start by clicking on the bottom tab "Company Tearsheet", while zeroing-in on the section "Estimates"
+4. We are looking at the example spreadsheet named "Company Tearsheet".  In this tutorial we will aim to replicate the data retrieval in Estimates parts of this example by using Eikon API from Python.  Let's start by clicking on the bottom tab "Company Tearsheet", while zeroing-in on the section "Estimates"
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTearsheetEstimatesMarked.jpg "Eikon Excel Company Tearsheet Estimates")
 
-5. Now we are ready for the most important of the steps in lookup, the actual lookup.  As we click on one of the cells that contain the estimate functions, for example E24, in the Excel formula window we see the  function call that is required to pull this data:
+5. Now we are ready for the most important step in the lookup.  As we click on one of the cells that contain functions retrieving estimates for the company, for example E24, in the Excel formula bar we see the function call that is required to pull this data:
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/ExcelFunctionLookupMarked.jpg "Eikon Excel Function Lookup")
 
- For example, E24 conpains TR.RevenueHigh with parameters period being "FY1", scale equaling 6, and currency #1,  referring to "USD"
+ For example, E24 contains TR.RevenueHigh field name with parameters signifying forecast period of next year ("FY1"), scale of 6 or one million, and currency #1, referring to "USD".
 
- The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from python eikon.
+ The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from Eikon Python library.
 
 6. While we are still looking at Eikon Excel, let's step aside from Company Tearsheet Estimates example, and consider a generic approach to discovering Eikon data content.  We are are going to discuss using _Excel Formula Builder_.
   
- We click on an empty Excel cel and from ThomsonReuters menu we choose Build Formula:
+ We click on an empty Excel cel and from ThomsonReuters menu we choose "Build Formula":
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Build Formula")
  
@@ -69,9 +69,9 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaRevenueHigh.jpg "Eikon Excel Formula Builder Revenue High")
 
- Now from "Category"selection list we select "Reuters Fundamentals", from "Fields" selection list we pick "Total Revenue" and in "Parameter" on the right hand side we change "Financial Period" to "FY-1".
+ Now from "Category" selection list we select "Reuters Fundamentals", from "Fields" selection list we pick "Total Revenue" and in "Parameter" on the right hand side we change "Financial Period" to "FY-1".
 
- Our selections are reflected in the ready to use formula in the bottom left corner.  When we are satisfied with the inputs, we click on "Insert" button in the bottom right corner:
+ Our selections are reflected in the ready to use formula in the bottom left corner.  Once we are satisfied with the inputs, we click on "Insert" button in the bottom right corner:
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaTotalRevenue.jpg "Eikon Excel Formula Builder Total Revenue")
 
@@ -81,11 +81,15 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
 ### Using DIB as Reference
 
- Eikon Data Item Browser is a tool that we use to reference eikon scripting.  Once we have started Eikon API Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
+ Eikon Data Item Browser is a lookup tool that we can use as an alternative to Excel.  It is particularly useful for development on Linux and Mac, as it allows to avoid switching between Linux or Mac and Windows machines.  Once we have started Eikon API Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonAPIProxyMarked.jpg "Starting DIB")
 
- We use DIB to search for the right data item, for example, for Instrument we enter "IBM", and choose "International Business Machines":
+ We use DIB to search for instruments and field names.
+
+ Let's look at the following example.
+
+ For Instrument we enter "IBM", and choose "International Business Machines":
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBIBM.jpg "DIB IBM")
 
@@ -97,7 +101,7 @@ And select from the Template Library first "Fundamentals" on the left, then "Com
 
 ### Using Eikon Python Library to Access Data
 
-And now we proceed to the most interesting part.  We know the data items we would like to use by lookingit up in Eikon Excel examples, and we can parametrize the data items per requirement, by looking up the data itemsin Data Item Browser.
+And now we proceed to the most interesting part.  We know the data items we would like to use by looking it up in Eikon Excel examples, and we can parametrize the data items per requirement, by looking up the data items in Data Item Browser.
 
 1.  We start Python interpreter.  We will work on the python script in separate text editor, pasting and running the script into python interpreter when we are ready to test. 
 
@@ -125,7 +129,7 @@ And now we proceed to the most interesting part.  We know the data items we wou
  0              78663.43974
  ```
  
-3. Next we try to retrieve data for the three different periods, as required for Esimatesdata region, while laying the results out into rows:
+3. Next we try to retrieve data for the three different periods, as required for Esimates in the Excel example spreadsheet, while laying the results out into rows:
 
  ```
  df1, err = ek.get_data("IBM", 
