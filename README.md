@@ -111,12 +111,12 @@ And now we proceed to the most interesting part.  We know the data items we wou
  
  ```
  df, err = ek.get_data("IBM", 
-					[ 
-                    ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
+          [ 
+                    {'TR.RevenueActValue':{'params':{'Period': 'FY0','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
                     ])
- df
+df
  ```
  
  We should see the output:
@@ -133,39 +133,40 @@ And now we proceed to the most interesting part.  We know the data items we wou
 
  ```
  df1, err = ek.get_data("IBM", 
-					[ 
-                    ('TR.RevenueActValue', {'Period': 'FY0','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
-                    ],sort_on=None, output='pandas', debug=True)
+          [ 
+                    {'TR.RevenueActValue':{'params':{'Period': 'FY0','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
+                    ], raw_output=False, debug=True)
 
- df2, err = ek.get_data("IBM", 
-					[ 
-                    ('TR.RevenueHigh', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueHigh', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueLow', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueLow', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
-                    ],sort_on=None, output='pandas', debug=True)
-
-
- df3, err = ek.get_data("IBM", 
-					[ 
-                    ('TR.RevenueLow', {'Period': 'FY1','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueLow', {'Period': 'FY2','Scale': 6, 'Curn': 'USD'})
-                    ],sort_on=None, output='pandas', debug=True)
+df2, err = ek.get_data("IBM", 
+          [ 
+                    {'TR.RevenueHigh':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueHigh':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueLow':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueLow':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
+                    ], debug=True)
 
 
+df3, err = ek.get_data("IBM", 
+          [ 
+                    {'TR.RevenueLow':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueLow':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
+                    ], debug=True)
 
- df4, err = ek.get_data("IBM", 
-					[ 
-                    ('TR.RevenueMeanEstimate', {'Period': 'FY1','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}),
-                    ('TR.RevenueMeanEstimate', {'Period': 'FY2','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'})
-                    ],sort_on=None, output='pandas', debug=True)
 
- df1
- df2
- df3
- df4
+
+df4, err = ek.get_data("IBM", 
+          [ 
+                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}},
+                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}}
+                    ], debug=True)
+
+df1
+df2
+df3
+df4
+
  ```
  
  We see the output:
