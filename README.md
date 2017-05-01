@@ -4,6 +4,13 @@
 
 We would like to start this tutorial where Eikon API Proxy Quickstart has left off.  This brief tutorial will discuss the steps required to retrieve the data that is presented in the Estmates section of "Company Tearsheet" Eikon Excel example.
 
+####Introduction
+This tuturial is one of the many learning materials published by Thomson Reuters to help developers learning Thomson Reuters APIs; it can also be read at  [ Fundamentals API - Company Tearsheet Estimate](https://developers.thomsonreuters.com/eikon-apis/eikon-web-and-scripting-apis-limited-access/learning).  Please consult this page for more learning materials and documentation about this API.
+
+For any question related to this article or the examples please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com).
+
+***Note:** To be able to ask questions and to benefit from the full content available on the [Thomson Reuters Developer Community portal](https://developers.thomsonreuters.com) we recommend you to [register here]( https://developers.thomsonreuters.com/iam/register) or [login here]( https://developers.thomsonreuters.com/iam/login?destination_path=Lw%3D%3D).*
+
 ### Prerequisites
 
 Please refer to [Quick Start Guide](https://developers.thomsonreuters.com/tr-eikon-scripting-apis-eap-limited-access/eikon-web-and-scripting-apis-beta/quick-start) for the details
