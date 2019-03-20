@@ -1,54 +1,36 @@
 import eikon as ek
-ek.set_app_id('F1968B7782740096D4E66')
+ek.set_app_id('your app key')
 
 dfFY0, err = ek.get_data("IBM", 
-                         [ 
-                    {'TR.RevenueActValue':{'params':{'Period': 'FY0','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDAActValue':{'params':{'Period': 'FY0','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EPSActValue':{'params':{'Period': 'FY0','Curn': 'USD'}}}
-                    ],debug=True)
+                 ['TR.RevenueActValue(Period=FY0, Scale=6, Curn=USD)',
+                  'TR.EBITDAActValue(Period=FY0, Scale=6, Curn=USD)',
+                  'TR.EPSActValue(Period=FY0, Curn=USD)'])
  
 dfFY1, err = ek.get_data("IBM", 
-                    [
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD', 'Precision':2}}},
-                    {'TR.RevenueHigh':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueLow':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDAMean':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD', 'Precision':2}}},
-                    {'TR.EBITDAHigh':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDALow':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EPSMeanEstimate':{'params':{'Period': 'FY1','Curn': 'USD'}}},
-                    {'TR.EPSHigh':{'params':{'Period': 'FY1','Curn': 'USD'}}},
-                    {'TR.EPSLow':{'params':{'Period': 'FY1','Curn': 'USD'}}}
-                    ],debug=True)
+                 ['TR.RevenueMeanEstimate(Period=FY1, Scale=6, Curn=USD, Precision=2)',
+                  'TR.RevenueHigh(Period=FY1, Scale=6, Curn=USD)', 'TR.RevenueLow(Period=FY1, Scale=6, Curn=USD)',
+                  'TR.EBITDAMean(Period=FY1, Scale=6, Curn=USD, Precision=2)',
+                  'TR.EBITDAHigh(Period=FY1, Scale=6, Curn=USD)', 'TR.EBITDALow(Period=FY1, Scale=6, Curn=USD)',
+                  'TR.EPSMeanEstimate(Period=FY1, Curn=USD)', 'TR.EPSHigh(Period=FY1, Curn=USD)', 'TR.EPSLow(Period=FY1, Curn=USD)'])
 
 # there can be only one request to get the field in get_data call
 # for the same field but with different parameters, we use another call                   
 dfFY1Roll, err = ek.get_data("IBM", 
-                    [
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDAMean':{'params':{'Period': 'FY1','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EPSMeanEstimate':{'params':{'Period': 'FY1','RollPeriods': 'False','Curn': 'USD','Precision':2}}}
-                    ], debug=True)
+                     ['TR.RevenueMeanEstimate(Period=FY1, Scale=6, Curn=USD, RollPeriods=False)',
+                      'TR.EBITDAMean(Period=FY1, Scale=6, Curn=USD, RollPeriods=False)',
+                      'TR.EPSMeanEstimate(Period=FY1, Curn=USD, RollPeriods=False, Precision=2)'])
 
 dfFY2, err = ek.get_data("IBM", 
-                    [
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueHigh':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueLow':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDAMean':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDAHigh':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDALow':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EPSMeanEstimate':{'params':{'Period': 'FY2','Curn': 'USD'}}},
-                    {'TR.EPSHigh':{'params':{'Period': 'FY2','Curn': 'USD'}}},
-                    {'TR.EPSLow':{'params':{'Period': 'FY2','Curn': 'USD'}}},
-                    ],debug=True)
+                 ['TR.RevenueMeanEstimate(Period=FY2, Scale=6, Curn=USD)',
+                  'TR.RevenueHigh(Period=FY2, Scale=6, Curn=USD)', 'TR.RevenueLow(Period=FY2, Scale=6, Curn=USD)',
+                  'TR.EBITDAMean(Period=FY2, Scale=6, Curn=USD, Precision=2)',
+                  'TR.EBITDAHigh(Period=FY2, Scale=6, Curn=USD)', 'TR.EBITDALow(Period=FY2, Scale=6, Curn=USD)',
+                  'TR.EPSMeanEstimate(Period=FY2, Curn=USD)', 'TR.EPSHigh(Period=FY2, Curn=USD)', 'TR.EPSLow(Period=FY2, Curn=USD)'])
 
 dfFY2Roll, err = ek.get_data("IBM", 
-                    [
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EBITDAMean':{'params':{'Period': 'FY2','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.EPSMeanEstimate':{'params':{'Period': 'FY2','RollPeriods': 'False','Curn': 'USD','Precision':2}}}
-                    ],debug=True)
+                     ['TR.RevenueMeanEstimate(Period=FY2, Scale=6, Curn=USD, RollPeriods=False)',
+                      'TR.EBITDAMean(Period=FY2, Scale=6, Curn=USD, RollPeriods=False)',
+                      'TR.EPSMeanEstimate(Period=FY2, Curn=USD, RollPeriods=False, Precision=2)'])
 
 dfFY0
 dfFY1
