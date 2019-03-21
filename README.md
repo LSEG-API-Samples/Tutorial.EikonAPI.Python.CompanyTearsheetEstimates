@@ -117,12 +117,9 @@ And now we proceed to the most interesting part.  We know the data items we wou
  _Note, please be careful of the spaces and tabs, as python requires them sctrictly observed._
  
  ```
- df, err = ek.get_data("IBM", 
-          [ 
-                    {'TR.RevenueActValue':{'params':{'Period': 'FY0','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
-                    ])
+df, err = ek.get_data("IBM", ['TR.RevenueActValue(Period=FY0, Scale=6, Curn=USD)',
+                    'TR.RevenueMeanEstimate(Period=FY1, Scale=6, Curn=USD)',
+                    'TR.RevenueMeanEstimate(Period=FY2, Scale=6, Curn=USD)'])
 df
  ```
  
@@ -139,35 +136,20 @@ df
 3. Next we try to retrieve data for the three different periods, as required for Esimates in the Excel example spreadsheet, while laying the results out into rows:
 
  ```
- df1, err = ek.get_data("IBM", 
-          [ 
-                    {'TR.RevenueActValue':{'params':{'Period': 'FY0','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
-                    ], raw_output=False, debug=True)
+df1, err = ek.get_data("IBM", ['TR.RevenueActValue(Period=FY0, Scale=6, Curn=USD)',
+                    'TR.RevenueMeanEstimate(Period=FY1, Scale=6, Curn=USD)',
+                    'TR.RevenueMeanEstimate(Period=FY2, Scale=6, Curn=USD)'])
 
-df2, err = ek.get_data("IBM", 
-          [ 
-                    {'TR.RevenueHigh':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueHigh':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueLow':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueLow':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
-                    ], debug=True)
+df2, err = ek.get_data("IBM", ['TR.RevenueHigh(Period=FY1, Scale=6, Curn=USD)',
+                    'TR.RevenueHigh(Period=FY2, Scale=6, Curn=USD)',
+                    'TR.RevenueLow(Period=FY1, Scale=6, Curn=USD)',
+                    'TR.RevenueLow(Period=FY2, Scale=6, Curn=USD)'])
 
+df3, err = ek.get_data("IBM", ['TR.RevenueLow(Period=FY1, Scale=6, Curn=USD)',
+                    'TR.RevenueLow(Period=FY2, Scale=6, Curn=USD)'])
 
-df3, err = ek.get_data("IBM", 
-          [ 
-                    {'TR.RevenueLow':{'params':{'Period': 'FY1','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueLow':{'params':{'Period': 'FY2','Scale': 6, 'Curn': 'USD'}}}
-                    ], debug=True)
-
-
-
-df4, err = ek.get_data("IBM", 
-          [ 
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY1','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}},
-                    {'TR.RevenueMeanEstimate':{'params':{'Period': 'FY2','RollPeriods': 'False','Scale': 6, 'Curn': 'USD'}}}
-                    ], debug=True)
+df4, err = ek.get_data("IBM", ['TR.RevenueMeanEstimate(Period=FY1, RollPeriods=False, Scale=6, Curn=USD)',
+                    'TR.RevenueMeanEstimate(Period=FY2, RollPeriods=False, Scale=6, Curn=USD)'])
 
 df1
 df2
