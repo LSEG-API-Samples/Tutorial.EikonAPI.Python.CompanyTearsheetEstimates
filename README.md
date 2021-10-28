@@ -88,7 +88,7 @@ Select from the Template Library "Fundamentals" on the left, then "Company Tears
 
 ### Using DIB as Reference
 
- Eikon Data Item Browser is a lookup tool that we can use as an alternative to Excel.  It is particularly useful for development on Linux and Mac, as it allows to avoid switching between Linux or Mac and Windows machines.  Once we have started Eikon API Proxy and signed into Thomson Reuters Eikon, we have an option to start DIB:
+ Eikon Data Item Browser is a lookup tool that we can use as an alternative to Excel.  It is particularly useful for development on Linux and Mac, as it allows to avoid switching between Linux or Mac and Windows machines.  Once we have started Eikon API Proxy and signed into Refinitiv Eikon, we have an option to start DIB:
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonAPIProxyMarked.jpg "Starting DIB")
 
@@ -189,6 +189,4 @@ _Note, that there can be only one request to get the field in get_data call.  T
  
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/pythonEstimatesCropped.jpg "Same data content, python")
 
-We'd like to conclude this tutorial by inviting you to experiment with both the tools and the approach.  Hope you will find the tools useful and approach working, but not set in stone.  We encourage you to share your results and successes, as well as your questions and problems with us on
-
-[Q&A Forum](https://community.developers.thomsonreuters.com)
+We'd like to conclude this tutorial by inviting you to experiment with both the tools and the approach.  Hope you will find the tools useful and approach working, but not set in stone.  We encourage you to share your results and successes, as well as your questions and problems with us on [Q&A Forum](https://community.developers.refinitiv.com).
