@@ -22,10 +22,10 @@ Please refer to [Quick Start Guide](https://developers.refinitiv.com/en/api-cata
 ### Expected Result
 
 This is how the Estimates look in Eikon Excel Company Tearsheet template example
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/excelEstimatesCropped.jpg "Excel Company Tearsheet Estimates")
+![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/excelEstimatesCropped.jpg "Excel Company Tearsheet Estimates")
 
 We learn how to retrieve the same data content via Eikon API from Python
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/pythonEstimatesCropped.jpg "Same data content, python")
+![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/pythonEstimatesCropped.jpg "Same data content, python")
 
 ### Approach (Detailed in the Next Sections)
 
@@ -40,23 +40,23 @@ We learn how to retrieve the same data content via Eikon API from Python
 1. From All Programs menu, we expand Refinitiv menu item and select Refinitiv Eikon - Microsoft Excel.
 2. Once Excel is open, from Refinitiv menu item we choose "Sign In" option, and enter valid Refinitiv Eikon credentials, hitting "Sign In" button.  The status should change to "Online"
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelSignIn.jpg "Eikon Excel Online")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/Images/EikonExcelSignIn.jpg "Eikon Excel Online")
 
 3. Next, from Refinitiv ribbon, we choose Templates
 
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTemplates.jpg "Eikon Excel Templates")
+![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelTemplates.jpg "Eikon Excel Templates")
 
 Select from the Template Library "Fundamentals" on the left, then "Company Tearsheet" on the right, then click "Open":
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTearsheet.jpg "Eikon Excel Company Tearsheet")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelTearsheet.jpg "Eikon Excel Company Tearsheet")
 
 4. We are looking at the example spreadsheet named "Company Tearsheet".  In this tutorial we will aim to replicate the data retrieval in Estimates parts of this example by using Eikon API from Python.  Let's start by clicking on the bottom tab "Company Tearsheet", while zeroing-in on the section "Estimates"
 
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTearsheetEstimatesMarked.jpg "Eikon Excel Company Tearsheet Estimates")
+![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelTearsheetEstimatesMarked.jpg "Eikon Excel Company Tearsheet Estimates")
 
 5. Now we are ready for the most important step in the lookup.  As we click on one of the cells that contain functions retrieving estimates for the company, for example E24, in the Excel formula bar we see the function call that is required to pull this data:
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/ExcelFunctionLookupMarked.jpg "Eikon Excel Function Lookup")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/ExcelFunctionLookupMarked.jpg "Eikon Excel Function Lookup")
 
  For example, E24 contains TR.RevenueHigh field name with parameters signifying forecast period of next year ("FY1"), scale of 6 or one million, and currency #1, referring to "USD".
 
@@ -66,31 +66,31 @@ Select from the Template Library "Fundamentals" on the left, then "Company Tears
   
  We click on an empty Excel cel and from Refinitiv menu we choose "Build Formula":
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Build Formula")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Build Formula")
  
  Once Formula Builder is up, in the "Instrument" input we type "IBM" and out of the offered options click on "International Business Machines":
   
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaIBM.jpg "Eikon Excel Formula Builder IBM")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelBuildFormulaIBM.jpg "Eikon Excel Formula Builder IBM")
 
  Next, in "Search Data Items" input we type "Revenue High":
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaRevenueHigh.jpg "Eikon Excel Formula Builder Revenue High")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelBuildFormulaRevenueHigh.jpg "Eikon Excel Formula Builder Revenue High")
 
  Now from "Category" selection list we select "Refinitiv Financials", from "Fields" selection list we pick "Total Revenue" and in "Parameter" on the right hand side we change "Financial Period" to "FY-1".
 
  Our selections are reflected in the ready to use formula in the bottom left corner.  Once we are satisfied with the inputs, we click on "Insert" button in the bottom right corner:
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaTotalRevenue.jpg "Eikon Excel Formula Builder Total Revenue")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelBuildFormulaTotalRevenue.jpg "Eikon Excel Formula Builder Total Revenue")
 
  And our Excel spreadsheet, in the selected cell, now reflects the updated Total Revenue:
 
-  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTotalRevenue.jpg "Eikon Excel Total Revenue")
+  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonExcelTotalRevenue.jpg "Eikon Excel Total Revenue")
 
 ### Using DIB as Reference
 
  Eikon Data Item Browser is a lookup tool that we can use as an alternative to Excel.  It is particularly useful for development on Linux and Mac, as it allows to avoid switching between Linux or Mac and Windows machines.  Once we have started Eikon API Proxy and signed into Refinitiv Eikon, we have an option to start DIB:
 
-![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonAPIProxyMarked.jpg "Starting DIB")
+![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/EikonAPIProxyMarked.jpg "Starting DIB")
 
  We use DIB to search for instruments and field names.
 
@@ -98,13 +98,13 @@ Select from the Template Library "Fundamentals" on the left, then "Company Tears
 
  For Instrument we enter "IBM", and choose "International Business Machines":
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBIBM.jpg "DIB IBM")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/DIBIBM.jpg "DIB IBM")
 
  In Data Item Name we look up TR.RevenueHigh,  so we start typing "TR.RevenueH" and once TR.RevenueHigh appears in the main window, we select it.  We are able to:  
  * Lookup the complete list of parameters with possible values (on the right side panel) 
  * Review the specific value we expect for IBM, on the main panel
 
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/DIBMarked.jpg "Using DIB")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/DIBMarked.jpg "Using DIB")
 
 ### Using Eikon Python Library to Access Data
 
@@ -187,6 +187,6 @@ _Note, that there can be only one request to get the field in get_data call.  T
 
  When we run this script, the result should be:
  
- ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/pythonEstimatesCropped.jpg "Same data content, python")
+ ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/Images/pythonEstimatesCropped.jpg "Same data content, python")
 
 We'd like to conclude this tutorial by inviting you to experiment with both the tools and the approach.  Hope you will find the tools useful and approach working, but not set in stone.  We encourage you to share your results and successes, as well as your questions and problems with us on [Q&A Forum](https://community.developers.refinitiv.com).
