@@ -5,15 +5,15 @@
 We would like to start this tutorial where Eikon API Proxy Quickstart has left off.  This brief tutorial will discuss the steps required to retrieve the data that is presented in the Estmates section of "Company Tearsheet" Eikon Excel example.
 
 ####Introduction
-This tuturial is one of the many learning materials published by Thomson Reuters to help developers learning Thomson Reuters APIs; it can also be read at  [ Fundamentals API - Company Tearsheet Estimate](https://developers.thomsonreuters.com/eikon-apis/eikon-web-and-scripting-apis-limited-access/learning).  Please consult this page for more learning materials and documentation about this API.
+This tuturial is one of the many learning materials published by Refinitiv to help developers learning Refinitiv APIs; it can also be read at  [Fundamentals API - Company Tearsheet Estimate](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/tutorials#fundamentals-api-company-tearsheet-estimate).  Please consult this page for more learning materials and documentation about this API.
 
-For any question related to this article or the examples please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com).
+For any question related to this article or the examples please use the Developer Community [Q&A Forum](https://community.developers.refinitiv.com/index.html).
 
-***Note:** To be able to ask questions and to benefit from the full content available on the [Thomson Reuters Developer Community portal](https://developers.thomsonreuters.com) we recommend you to [register here]( https://developers.thomsonreuters.com/iam/register) or [login here]( https://developers.thomsonreuters.com/iam/login?destination_path=Lw%3D%3D).*
+***Note:** To be able to ask questions and to benefit from the full content available on the [Refinitiv Developer Community portal](https://developers.refinitiv.com) we recommend you to [register here]( https://developers.refinitiv.com/en/register) or [login here]( https://community.developers.refinitiv.com/users/login.html).*
 
 ### Prerequisites
 
-Please refer to [Quick Start Guide](https://developers.thomsonreuters.com/tr-eikon-scripting-apis-eap-limited-access/eikon-web-and-scripting-apis-beta/quick-start) for the details
+Please refer to [Quick Start Guide](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start) for the details
 
 1. TR Eikon API Proxy is installed
 2. Python is installed
@@ -37,12 +37,12 @@ We learn how to retrieve the same data content via Eikon API from Python
 
 ### Using Excel for Lookup
 
-1. From All Programs menu, we expand Thomson Reuters menu item and select Thomson Reuters Eikon - Microsoft Excel.
-2. Once Excel is open, from Thomson Reuters menu item we choose "Sign In" option, and enter valid Thomson Reuters Eikon credentials, hitting "Sign In" button.  The status should change to "Online"
+1. From All Programs menu, we expand Refinitiv menu item and select Refinitiv Eikon - Microsoft Excel.
+2. Once Excel is open, from Refinitiv menu item we choose "Sign In" option, and enter valid Refinitiv Eikon credentials, hitting "Sign In" button.  The status should change to "Online"
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelSignIn.jpg "Eikon Excel Online")
 
-3. Next, from Thomson Reuters ribbon, we choose Templates
+3. Next, from Refinitiv ribbon, we choose Templates
 
 ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelTemplates.jpg "Eikon Excel Templates")
 
@@ -62,9 +62,9 @@ Select from the Template Library "Fundamentals" on the left, then "Company Tears
 
  The repeated lookup will allow us to learn how Company Tearsheet example is built, down to every cell,  every function call complete with the required information.  These details we are going to use to call the same  functions from Eikon Python library.
 
-6. While we are still looking at Eikon Excel, let's step aside from Company Tearsheet Estimates example, and consider a generic approach to discovering Eikon data content.  We are are going to discuss using _Excel Formula Builder_.
+6. While we are still looking at Eikon Excel, let's step aside from Company Tearsheet Estimates example, and consider a generic approach to discovering Eikon data content.  We are going to discuss using _Excel Formula Builder_.
   
- We click on an empty Excel cel and from ThomsonReuters menu we choose "Build Formula":
+ We click on an empty Excel cel and from Refinitiv menu we choose "Build Formula":
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaMarked.jpg "Eikon Excel Build Formula")
  
@@ -76,7 +76,7 @@ Select from the Template Library "Fundamentals" on the left, then "Company Tears
 
  ![alt text](https://github.com/TR-API-Samples/EikonScriptingProxy_CompanyTearsheetEstimates_Python/blob/master/EikonExcelBuildFormulaRevenueHigh.jpg "Eikon Excel Formula Builder Revenue High")
 
- Now from "Category" selection list we select "Reuters Fundamentals", from "Fields" selection list we pick "Total Revenue" and in "Parameter" on the right hand side we change "Financial Period" to "FY-1".
+ Now from "Category" selection list we select "Refinitiv Financials", from "Fields" selection list we pick "Total Revenue" and in "Parameter" on the right hand side we change "Financial Period" to "FY-1".
 
  Our selections are reflected in the ready to use formula in the bottom left corner.  Once we are satisfied with the inputs, we click on "Insert" button in the bottom right corner:
 
