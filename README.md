@@ -15,7 +15,7 @@ For any question related to this article or the examples please use the Develope
 
 Please refer to [Quick Start Guide](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start) for the details
 
-1. TR Eikon API Proxy is installed
+1. Eikon API Proxy is installed
 2. Python is installed
 3. Eikon Python library is installed
 
